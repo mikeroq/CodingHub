@@ -1,0 +1,72 @@
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName www.mikeroq.be
+AuthUserFile /home/roq/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home/roq/public_html/_vti_pvt/service.grp	   
+RewriteEngine on
+
+RewriteRule ^/index.php?x=tutorials&id=24$ http://mikeroq.be/tutorials/view/5/
+RewriteRule ^tutorials/view/([0-9]+)$ http://www.mikeroq.be/tutorials/view/$1/ [R]
+RewriteRule ^tutorials/view/([0-9]+)/$ index.php?x=tutorials&id=$1
+RewriteRule ^articles/view/([0-9]+)$ http://www.mikeroq.be/articles/view/$1/ [R]
+RewriteRule ^articles/view/([0-9]+)/$ index.php?x=article&id=$1
+RewriteRule ^tutorials/cat/([0-9]+)$ http://www.mikeroq.be/tutorials/cat/$1/ [R]
+RewriteRule ^tutorials/cat/([0-9]+)/$ index.php?x=tutorials&cid=$1
+RewriteRule ^affiliates/out/([0-9]+)$ http://www.mikeroq.be/affiliates/out/$1/ [R]
+RewriteRule ^affiliates/out/([0-9]+)/$ index.php?x=affiliates&mode=out&id=$1
+RewriteRule ^affiliates/in/([0-9]+)$ http://www.mikeroq.be/affiliates/in/$1/ [R]
+RewriteRule ^affiliates/in/([0-9]+)/$ index.php?x=affiliates&mode=in&id=$1
+RewriteRule ^comment/([0-9]+)$ http://www.mikeroq.be/comment/$1/ [R]
+RewriteRule ^comment/([0-9]+)/$ index.php?x=comment&id=$1
+RewriteRule ^tutorials$ http://www.mikeroq.be/tutorials/ [R]
+RewriteRule ^tutorials/$ index.php?x=tutorials
+RewriteRule ^contact$ http://www.mikeroq.be/contact/ [R]
+RewriteRule ^contact/$ index.php?x=contact
+RewriteRule ^affiliates$ http://www.mikeroq.be/affiliates/ [R]
+RewriteRule ^affiliates/$ index.php?x=affiliates
+RewriteRule ^stats$ http://www.mikeroq.be/stats/ [R]
+RewriteRule ^stats/$ index.php?x=stats
+RewriteRule ^forums$ http://www.mikeroq.be/forums/ [R]
+RewriteRule ^forums/$ index.php?x=forum
+RewriteRule ^downloads$ http://www.mikeroq.be/downloads/ [R]
+RewriteRule ^downloads/$ index.php?x=downloads
+RewriteRule ^login$ http://www.mikeroq.be/login/ [R]
+RewriteRule ^login/$ index.php?x=login
+RewriteRule ^register$ http://www.mikeroq.be/register/ [R]
+RewriteRule ^register/$ index.php?x=register
+RewriteRule ^tos$ http://www.mikeroq.be/tos/ [R]
+RewriteRule ^tos/$ index.php?x=tos
+RewriteRule ^bugreport$ http://www.mikeroq.be/bugreport/ [R]
+RewriteRule ^bugreport/$ index.php?x=bugreport
+RewriteRule ^tools/pagerank$ http://www.mikeroq.be/tools/pagerank/ [R]
+RewriteRule ^tools/pagerank/$ index.php?x=tools&tool=pagerank
+RewriteRule ^tools$ http://www.mikeroq.be/tools/ [R]
+RewriteRule ^tools/$ index.php?x=tools
+RewriteRule ^articles$ http://www.mikeroq.be/articles/ [R]
+RewriteRule ^articles/$ index.php?x=articles
+RewriteRule ^tools/alexa$ http://www.mikeroq.be/tools/alexa/ [R]
+RewriteRule ^tools/alexa/$ index.php?x=tools&tool=alexa
+RewriteRule ^tools/meta$ http://www.mikeroq.be/tools/meta/ [R]
+RewriteRule ^tools/meta/$ index.php?x=tools&tool=meta
+ErrorDocument 404 http://www.mikeroq.be
+RewriteRule ^generate/alexa/sig/([0-9])/(.*)$ sig.php?sig=$1&url=$2
+RewriteRule ^generate/alexa/sig/([0-9])/(.*)/.png$ sig.php?sig=$1&url=$2
+RewriteRule ^generate/alexa/([0-9])/(.*)$ image.php?sig=$1&url=$2
+RewriteRule ^generate/alexa/([0-9])/(.*)/.png$ image.php?sig=$1&url=$2
+RewriteRule ^generate/alexa/(.*)$ image.php?url=$1
+RewriteRule ^generate/alexa/(.*)/.png$ image.php?url=$1
+RewriteRule ^teamspeak/(.*)/(.*)$ index.php?x=demo&address=$1&port=$2
+ReWriteRule ^rig$ http://www.mikeroq.be/rig/ [R]
+RewriteRule ^rig/$ index.php?x=rig
+AddType application/x-httpd-php-source phps

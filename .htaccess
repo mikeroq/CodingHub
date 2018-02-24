@@ -1,0 +1,136 @@
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName www.tutorial-hub.com
+AuthUserFile /home/roq/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home/roq/public_html/_vti_pvt/service.grp	   
+RewriteEngine on
+RewriteRule ^advertise$ /advertise/
+RewriteRule ^advertise/$ index.php?x=advertise
+RewriteRule ^forum$ /forum/
+RewriteRule ^forum/$ index.php?x=forum
+RewriteRule ^forum/view/([0-9]+)$ /forum/view/$1/
+RewriteRule ^forum/view/([0-9]+)/$ index.php?x=forum&act=cat&id=$1
+RewriteRule ^forum/topic/([0-9]+)$ /forum/topic/$1/
+RewriteRule ^forum/topic/([0-9]+)/$ index.php?x=forum&act=thread&id=$1
+RewriteRule ^out/([0-9]+)/$ index.php?x=out&id=$1
+RewriteRule ^in([0-9]+)/$ index.php?x=out&iid=$1
+RewriteRule ^in/([0-9]+)$ index.php?x=out&iid=$1
+RewriteRule ^/index.php?x=tutorials&id=24$ /tutorials/view/5/
+RewriteRule ^tutorials/view/([0-9]+)$ /tutorials/view/$1/ [R]
+RewriteRule ^tutorials/view/([0-9]+)/$ index.php?x=tutorials&id=$1
+RewriteRule ^articles/view/([0-9]+)$ /articles/view/$1/ [R]
+RewriteRule ^articles/view/([0-9]+)/$ index.php?x=article&id=$1
+RewriteRule ^tutorials/([0-9]+)$ /tutorials/$1/ [R]
+RewriteRule ^tutorials/([0-9]+)/$ index.php?x=tutorials&cid=$1
+RewriteRule ^tutorials/([0-9]+)/page/([0-9]+)$ /tutorials/$1/page/$2/ [R]
+RewriteRule ^tutorials/([0-9]+)/page/([0-9]+)/$ index.php?x=tutorials&cid=$1&page=$2
+RewriteRule ^affiliates/out/([0-9]+)$ /affiliates/out/$1/ [R]
+RewriteRule ^affiliates/out/([0-9]+)/$ index.php?x=affiliates&mode=out&id=$1
+RewriteRule ^affiliates/in/([0-9]+)$ /affiliates/in/$1/ [R]
+RewriteRule ^affiliates/in/([0-9]+)/$ index.php?x=affiliates&mode=in&id=$1
+RewriteRule ^comment/([0-9]+)$ /comment/$1/ [R]
+RewriteRule ^comment/([0-9]+)/$ index.php?x=comment&id=$1
+RewriteRule ^tutorials$ /tutorials/ [R]
+RewriteRule ^tutorials/$ index.php?x=tutorials
+RewriteRule ^contact$ /contact/ [R]
+RewriteRule ^contact/$ index.php?x=contact
+RewriteRule ^affiliates$ /affiliates/ [R]
+RewriteRule ^affiliates/$ index.php?x=affiliates
+RewriteRule ^stats$ /stats/ [R]
+RewriteRule ^stats/$ index.php?x=stats
+RewriteRule ^forums$ /forums/ [R]
+RewriteRule ^forums/$ index.php?x=forum
+RewriteRule ^downloads$ /downloads/ [R]
+RewriteRule ^downloads/$ index.php?x=downloads
+RewriteRule ^login$ /login/ [R]
+RewriteRule ^login/$ index.php?x=login
+RewriteRule ^logout$ /logout/ [R]
+RewriteRule ^logout/$ index.php?x=logout
+RewriteRule ^register$ /register/ [R]
+RewriteRule ^register/$ index.php?x=register
+RewriteRule ^cp$ /cp/ [R]
+RewriteRule ^cp/$ index.php?x=cp
+RewriteRule ^bugreport$ /bugreport/ [R]
+RewriteRule ^bugreport/$ index.php?x=bugreport
+RewriteRule ^tools/pagerank$ /tools/pagerank/ [R]
+RewriteRule ^tools/pagerank/$ index.php?x=tools&tool=pagerank
+RewriteRule ^tools$ /tools/ [R]
+RewriteRule ^tools/$ index.php?x=tools
+RewriteRule ^articles$ /articles/ [R]
+RewriteRule ^articles/$ index.php?x=articles
+RewriteRule ^tools/alexa$ /tools/alexa/ [R]
+RewriteRule ^tools/alexa/$ index.php?x=tools&tool=alexa
+RewriteRule ^tools/meta$ /tools/meta/ [R]
+RewriteRule ^tools/meta/$ index.php?x=tools&tool=meta
+RewriteRule ^404/$ index.php?x=404
+ErrorDocument 404 /404/
+RewriteRule ^generate/alexa/sig/([0-9])/(.*)$ sig.php?sig=$1&url=$2
+RewriteRule ^generate/alexa/sig/([0-9])/(.*)/.png$ sig.php?sig=$1&url=$2
+RewriteRule ^generate/alexa/([0-9])/(.*)$ image.php?sig=$1&url=$2
+RewriteRule ^generate/alexa/([0-9])/(.*)/.png$ image.php?sig=$1&url=$2
+RewriteRule ^generate/alexa/(.*)$ image.php?url=$1
+RewriteRule ^generate/alexa/(.*)/.png$ image.php?url=$1
+RewriteRule ^teamspeak/(.*)/(.*)$ index.php?x=demo&address=$1&port=$2
+RewriteRule ^submit$ /submit/ [R]
+RewriteRule ^submit/$ index.php?x=submit
+
+RewriteRule ^logs$ /logs/ [R]
+RewriteRule ^logs/$ index.php?x=showlogs
+
+RewriteRule ^logs/page/([0-9]+)$ /logs/page/$1/ [R]
+RewriteRule ^logs/page/([0-9]+)/$ index.php?x=showlogs&page=$1
+RewriteRule ^logs/page/([0-9]+)/$ index.php?x=showlogs&page=$1
+RewriteRule ^changepass$ /changepass/ [R]
+RewriteRule ^changepass/$ index.php?x=change
+RewriteRule ^profile/([aA0-zZ9]+)$ /profile/$1/ [R]
+RewriteRule ^profile/([aA0-zZ9]+)/$ index.php?x=profile&user=$1
+RewriteRule ^editprofile$ /editprofile/ [R]
+RewriteRule ^editprofile/$ index.php?x=editprofile
+RewriteRule ^avatar/upload$ /avatar/upload/ [R]
+RewriteRule ^avatar/upload/$ index.php?x=avatar&act=upload
+RewriteRule ^avatar/delete$ /avatar/delete/ [R]
+RewriteRule ^avatar/delete/$ index.php?x=avatar&act=delete
+
+RewriteRule ^pm$ /pm/ [R]
+RewriteRule ^pm/$ index.php?x=pm&page=inbox
+RewriteRule ^pm/write$ /pm/write/ [R]
+RewriteRule ^pm/write/$ index.php?x=pm&page=write
+
+RewriteRule ^pm/view/([0-9]+)$ /pm/view/$1/ [R]
+RewriteRule ^pm/view/([0-9]+)/$ index.php?x=pm&page=view&id=$1
+
+RewriteRule ^pm/delete/([0-9]+)$ /pm/delete/$1/ [R]
+RewriteRule ^pm/delete/([0-9]+)/$ index.php?x=pm&page=delete&id=$1
+AddType application/x-httpd-php-source phps		  
+
+
+RewriteRule ^admin$ /admin/ [R]
+RewriteRule ^admin/$ index.php?x=admin
+RewriteRule ^admin/del/([0-9]+)$ /admin/del/$1/ [R]
+RewriteRule ^admin/del/([0-9]+)/$ index.php?x=admin&act=del&id=$1
+RewriteRule ^admin/app/([0-9]+)$ /admin/app/$1/ [R]
+RewriteRule ^admin/app/([0-9]+)/$ index.php?x=admin&act=app&id=$1
+RewriteRule ^tutcat/edit/([0-9]+)$ /tutcat/edit/$1/ [R]
+RewriteRule ^tutcat/edit/([0-9]+)/$ index.php?x=tutcat&act=edit&id=$1
+RewriteRule ^tutcat$ /tutcat/ [R]
+RewriteRule ^tutcat/$ index.php?x=tutcat	  
+RewriteRule ^settings$ /settings/ [R]
+RewriteRule ^settings/$ index.php?x=settings	
+RewriteRule ^addaff$ /addaff/ [R]
+RewriteRule ^addaff/$ index.php?x=addaff	  
+RewriteRule ^tutedit/([0-9]+)$ /tutedit/$1/ [R]
+RewriteRule ^tutedit/([0-9]+)/$ index.php?x=edittut&id=$1
+RewriteRule ^stats$ /stats/ [R]
+RewriteRule ^stats/$ index.php?x=stats	  
+

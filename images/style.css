@@ -1,0 +1,175 @@
+@charset "iso-8859-1";	  
+BODY {
+margin: 0 auto;	 
+text-align: center;
+background: #fefefe url(http://mikeroq.com/codinghub/images/page_bg.png) repeat-x;
+font-family: Verdana,Tahoma,Sans-Serif;
+font-size: 13px;
+}	
+#head_unit {
+background: url(http://mikeroq.com/codinghub/images/head_bg.jpg) repeat-x;
+height: 69px;
+width: 963px;  
+text-align: left; 
+margin: 0 auto;
+}			  
+#logo {
+width: 205px;
+height: 69px;
+float: left;
+display: inline;
+}
+#ad {
+float: right; 
+
+width: 500px;
+display: inline;
+clear: both;
+right: 0;
+top: 0;	
+margin-top: -80px;	
+margin-right: -10px;
+}	 
+   
+.nav {
+background: url(http://mikeroq.com/codinghub/images/bar.png) repeat-x center;
+border: 1px #39422e solid;
+border-top: 0px;
+border-bottom: 0px;	  
+height: 27px;
+width: 958px;
+line-height: 27px;
+font-weight: bold;
+color: #fefefe;   
+text-align: right;
+font-size: 12px;
+padding-right: 5px;	  
+margin: 0 auto;
+}
+.nav a {
+color: #fefefe;	 
+padding-left: 5px;
+padding-right: 5px;
+} 	
+.left {
+width: 150px;	 
+}
+#main {
+margin: 0 auto;
+width: 963px; 
+text-align: left; 
+} 
+a {
+color: #222;
+}	 
+a:hover {
+text-decoration: none;
+}
+#left {
+width: 730px;
+float: left;
+
+}
+#right {
+margin-left: 3px;
+width: 193px;
+float: right;
+
+}	 
+h2 {
+font-weight: bold;
+border-left: 1px #222 solid;
+border-top: 1px #222 solid;
+border-right: 1px #222 solid;
+width: 100%-5;
+height: 27px;
+line-height: 27px;
+font-size: 12px; 
+color: #fefefe;
+padding-left: 5px;
+margin: 0;	 
+background: url(http://mikeroq.com/codinghub/images/bar.png) repeat-x center;
+border-bottom: 0px;
+}	 
+#right h2 {
+background: url(http://mikeroq.com/codinghub/images/bar_bg.jpg) repeat-x;
+}
+#clear {
+clear: both;
+width: 100%;
+}
+.box {		 
+background: #fffaf6;
+padding: 5px;
+border: 1px #222 solid;	
+margin-bottom: 10px;
+} 		
+
+ .code {
+	border: 1px solid #222;
+	border-top: 0px;	
+	margin: 5px;  
+	font-family: verdana, arial, serif;
+	font-size: 11px;
+}	
+.code table {
+border: 1px #222 solid;
+}
+.cc {
+width: 617px;
+overflow: auto;
+} 	
+h2 a {
+color: #fff;
+}
+ .error {
+background: lightyellow;
+border: 1px #666 solid;
+padding: 10px;
+margin-bottom: 10px;
+}	
+.crumb  {
+background: lightyellow;
+border: 1px #666 solid;
+padding: 2px;
+margin-left: -6px;
+margin-right: -6px;	
+margin-top: -6px;
+font-size: 10px;
+margin-bottom: 5px;
+}	 
+.page {
+padding: 2px;
+font-size: 9px;
+background: #eee;
+border: 1px #222 solid;
+margin-right: -3px;	 
+text-decoration: none;
+margin-bottom: 5px;
+} 
+.page2 {
+padding: 2px;
+font-size: 9px;
+background: #ffcc99;
+border: 1px #222 solid;
+margin-right: -3px;	  
+text-decoration: none;
+margin-bottom: 5px;
+}	   
+.page a, .page2 a {
+margin-bottom: 5px;
+}
+input, textarea, select{
+border: 1px #222 solid;
+font-family: Verdana,Tahoma,Sans-Serif;	
+margin: 1px;
+}  
+textarea {
+font-size: 12px;
+}	   
+legend {
+font-weight: bold;
+}	   
+.strike {
+text-decoration: line-through; 
+}
